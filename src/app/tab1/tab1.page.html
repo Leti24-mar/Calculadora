@@ -1,0 +1,89 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title> Calculadora </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Tab 1</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+ <ion-item>
+    <ion-input label="coloque numeros" type = "text" placeholder="Digite o valor a calcular" [(ngModel)] = "numeros"></ion-input>
+  </ion-item>
+
+  
+ <ion-item>
+    <ion-input label="Numero :" type = "text" placeholder="Numero digitado" [(ngModel)] = "v2" ></ion-input>
+  </ion-item>
+
+    <ion-grid>
+  <ion-row>
+    <ion-col>
+       <ion-button expand="block" (click)="calcular()">=</ion-button> 
+      </ion-col>
+     <ion-col>  
+      <ion-button expand="block" color="warning" (click)="apagar()">DEL</ion-button>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+<ion-grid>
+  <ion-row>
+    <ion-col>    
+      <ion-button expand="block" (click)="OperadordeSoma()">+</ion-button>
+    </ion-col>
+    <ion-col>
+       <ion-button expand="block" (click)="OperadordeSubtracao()">-</ion-button>
+      </ion-col>
+    <ion-col>
+       <ion-button expand="block" (click)="OperadordeDivisao()">/</ion-button>
+      </ion-col>
+    <ion-col>
+       <ion-button expand="block" (click)="OperadordeMultiplicacao()">*</ion-button>
+    </ion-col>
+    <ion-col>
+       <ion-button expand="block" (click)="OperadordePotencia()">**</ion-button>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+<ion-grid>
+  <ion-row>
+    <ion-col>
+       <ion-button expand="block" (click)="adicionarNumero('1')">1</ion-button>
+    </ion-col>
+    <ion-col>
+      <ion-button expand="block" (click)="adicionarNumero('2')">2</ion-button>
+    </ion-col>
+    <ion-col>
+      <ion-button expand="block" (click)="adicionarNumero('3')">3</ion-button>
+    </ion-col>
+    <ion-col>
+      <ion-button expand="block" (click)="adicionarNumero('4')">4</ion-button>
+    </ion-col>
+    <ion-col>
+      <ion-button expand="block" (click)="adicionarNumero('5')">5</ion-button>
+    </ion-col>
+    <ion-col>
+      <ion-button expand="block" (click)="adicionarNumero('6')">6</ion-button>
+    </ion-col>
+    <ion-col>
+      <ion-button expand="block" (click)="adicionarNumero('7')">7</ion-button>
+    </ion-col>
+    <ion-col>
+      <ion-button expand="block" (click)="adicionarNumero('8')">8</ion-button>
+    </ion-col>
+    <ion-col>
+      <ion-button expand="block" (click)="adicionarNumero('9')">9</ion-button>
+    </ion-col>
+    <ion-col>
+      <ion-button expand="block" (click)="adicionarNumero('0')">0</ion-button>
+    </ion-col>
+   
+  </ion-row>
+</ion-grid>
+</ion-content>
